@@ -1,0 +1,17 @@
+2016-07-29 15:36:09 ERROR: Spider error processing <GET http://www.metacritic.com/game/pc/starlite> (referer: http://www.metacritic.com/browse/games/title/pc/s?page=15)
+Traceback (most recent call last):
+  File "/home/bulos87/anaconda2/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/bulos87/anaconda2/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/bulos87/anaconda2/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/bulos87/anaconda2/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/bulos87/anaconda2/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/bulos87/SideProjects/VideoGameCrawler/gamecrawler/gamecrawler/spiders/game_info.py", line 76, in parse_game_info
+    release_date_element = data_summary_element.css('ul > li.release_data > span.data::text')[0]
+  File "/home/bulos87/anaconda2/lib/python2.7/site-packages/parsel/selector.py", line 58, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+IndexError: list index out of range
